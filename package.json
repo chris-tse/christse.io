@@ -1,11 +1,10 @@
 {
   "name": "christse.io",
   "version": "1.0.0",
-  "description": "Personal portfolio site.",
-  "main": "index.js",
+  "description": "Personal portfolio site",
   "scripts": {
     "clean": "rm -rf public",
-    "build": "npm run clean && mkdir public && cp -r ./* public/",
+    "build": "npm run clean && mkdir public && cp -r index.html sitemap.xml css files images portfolio scripts public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
