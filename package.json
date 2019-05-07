@@ -4,7 +4,8 @@
   "description": "Personal portfolio site.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf public && mkdir public && cp -r ./* public/",
+    "clean": "rm -rf public",
+    "build": "npm run clean && mkdir public && cp -r ./* public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
