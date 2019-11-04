@@ -4,7 +4,7 @@
   "description": "Personal portfolio site",
   "scripts": {
     "clean": "rm -rf public",
-    "build": "npm run clean && mkdir public && cp -r index.html sitemap.xml _redirects css files images portfolio scripts public/",
+    "build": "npm run clean && mkdir public && cp -r index.html sitemap.xml css files images portfolio scripts public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
