@@ -1,76 +1,20 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import { rhythm, scale } from '../utils/typography';
+import Header from './header'
 
-class Layout extends React.Component {
-    render() {
-        // const { location, title, children } = this.props;
-        // const rootPath = `/`;
+function Layout({ children }) {
+	return (
+		<div className="flex flex-col min-h-screen font-sans text-gray-800">
+			<Header />
 
-        // let header;
-
-        // if (location.pathname === rootPath) {
-        //     header = (
-        //         <h1
-        //             style={{
-        //                 ...scale(1.5),
-        //                 marginBottom: rhythm(1.5),
-        //                 marginTop: 0,
-        //             }}
-        //         >
-        //             <Link
-        //                 style={{
-        //                     boxShadow: `none`,
-        //                     textDecoration: `none`,
-        //                     color: `inherit`,
-        //                 }}
-        //                 to={`/`}
-        //             >
-        //                 {title}
-        //             </Link>
-        //         </h1>
-        //     );
-        // } else {
-        //     header = (
-        //         <h3
-        //             style={{
-        //                 fontFamily: `Montserrat, sans-serif`,
-        //                 marginTop: 0,
-        //             }}
-        //         >
-        //             <Link
-        //                 style={{
-        //                     boxShadow: `none`,
-        //                     textDecoration: `none`,
-        //                     color: `inherit`,
-        //                 }}
-        //                 to={`/`}
-        //             >
-        //                 {title}
-        //             </Link>
-        //         </h3>
-        //     );
-        // }
-        return (
-            <div
-                style={{
-                    marginLeft: `auto`,
-                    marginRight: `auto`,
-                    maxWidth: rhythm(24),
-                    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-                }}
-            >
-                {/* <header>{header}</header> */}
-                <main>{this.props.children}</main>
-                <footer>
-                    © Chris Tse {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
-            </div>
-        );
-    }
+			<main className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-8">{children}</main>
+		</div>
+	)
 }
 
-export default Layout;
+Layout.propTypes = {
+	children: PropTypes.node.isRequired,
+}
+
+export default Layout

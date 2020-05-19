@@ -1,4 +1,4 @@
-.vs
-public
-.github
 .cache
+package.json
+package-lock.json
+public
