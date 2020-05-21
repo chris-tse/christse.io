@@ -3,11 +3,11 @@ import React from 'react'
 
 function Project({ name, description, thumbnailPath, demoUrl, sourceUrl }) {
     return (
-        <div className="flex flex-col md:flex-row">
-            <div className="p-4 pl-0">
+        <div className="flex flex-col md:flex-row mb-8">
+            <div className="p-8 pl-0">
                 <img src={thumbnailPath} style={{ maxWidth: 350 }} alt="Pomodoro timer project thumbnail" />
             </div>
-            <div className="row-span-2 p-4 pl-0">
+            <div className="row-span-2 p-8 pl-0">
                 <h3 className="text-2xl mb-4">{name}</h3>
                 <p className=" mb-8">{description}</p>
 
