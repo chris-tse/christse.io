@@ -35,7 +35,7 @@ function Header() {
                 <nav className={`${isExpanded ? `block` : `hidden`} md:block md:flex md:items-center w-full md:w-auto`}>
                     {[
                         {
-                            route: `/about`,
+                            route: `/work`,
                             title: `Work`,
                         },
                         {
