@@ -1,38 +1,47 @@
-import React from "react";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import dogIllustration from "../images/dog-illustration.svg";
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import PageHeading from '../components/page-heading'
+import WorkHistoryItem from '../components/work-history-item'
 
-function AboutPage() {
-  return (
-    <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="About"
-      />
+export const query = graphql`
+    query WorkHistoryQuery {
+        allWorkHistory {
+            nodes {
+                employer
+                title
+                dateRange
+                description
+            }
+        }
+    }
+`
 
-      <section className="flex flex-col items-center md:flex-row">
-        <div className="md:w-2/3 md:mr-8">
-          <blockquote className="pl-4 font-serif leading-loose text-justify border-l-4 border-gray-900">
-            The point is... to live one&apos;s life in the full complexity of
-            what one is, which is something much darker, more contradictory,
-            more of a maelstrom of impulses and passions, of cruelty, ecstacy,
-            and madness, than is apparent to the civilized being who glides on
-            the surface and fits smoothly into the world.
-          </blockquote>
+function WorkHistoryPage({ data }) {
+    const {
+        allWorkHistory: { nodes: workHistory },
+    } = data
 
-          <cite className="block mt-4 text-xs font-bold text-right uppercase">
-            – Thomas Nagel
-          </cite>
-        </div>
+    return (
+        <Layout>
+            <SEO title="About" />
 
-        <figure className="w-2/3 md:w-1/3">
-          <img alt="A dog relaxing" src={dogIllustration} />
-        </figure>
-      </section>
-    </Layout>
-  );
+            <PageHeading>Places I&apos;ve Worked</PageHeading>
+
+            <section className="max-w-xl">
+                {workHistory.map((item, index) => (
+                    <WorkHistoryItem key={`workhistory-${index}`} {...item} />
+                ))}
+            </section>
+        </Layout>
+    )
 }
 
-export default AboutPage;
+WorkHistoryPage.propTypes = {
+    data: PropTypes.object,
+}
+
+export default WorkHistoryPage

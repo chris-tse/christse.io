@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import PageHeading from '../components/page-heading'
 import Project from '../components/project-item'
 
 export const query = graphql`
@@ -28,7 +29,8 @@ function ProjectsPage({ data }) {
     return (
         <Layout>
             <SEO title="Projects" />
-            <h2 className="text-2xl font-bold inline-block my-4 py-3">Things I&apos;ve Made</h2>
+
+            <PageHeading>Things I&apos;ve Made</PageHeading>
 
             {projects.map(project => {
                 return <Project key={project.name} {...project} />
