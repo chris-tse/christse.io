@@ -33,3 +33,40 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         actions.createNode(node)
     })
 }
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+    const { createPage } = actions
+
+    const result = await graphql(`
+        {
+            allSanityBlogPost {
+                nodes {
+                    _rawContent
+                    date(formatString: "YYYY/MM/DD")
+                    title
+                    slug
+                    id
+                }
+            }
+        }
+    `)
+
+    if (result.errors) {
+        throw result.errors
+    }
+
+    const blogPosts = result.data.allSanityBlogPost.nodes || []
+
+    blogPosts.forEach(post => {
+        const { id, slug } = post
+        const path = `/blog/${slug}`
+
+        reporter.info(`Creating blog post page: ${path}`)
+
+        createPage({
+            path,
+            component: require.resolve('./src/templates/blogPost.js'),
+            context: { id },
+        })
+    })
+}

@@ -35,5 +35,12 @@ module.exports = {
             },
         },
         `gatsby-plugin-offline`,
+        {
+            resolve: 'gatsby-source-sanity',
+            options: {
+                projectId: 'vl1rvekg',
+                dataset: 'production',
+            },
+        },
     ],
 }
