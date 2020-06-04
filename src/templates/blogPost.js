@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
-import BlockContent from '@sanity/block-content-to-react'
+import ReactMarkdown from 'react-markdown'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -10,36 +10,55 @@ import { graphql } from 'gatsby'
 export const query = graphql`
     query BlogPostTemplateQuery($id: String!) {
         post: sanityBlogPost(id: { eq: $id }) {
-            date
+            date(formatString: "YYYY/MM/DD")
             title
-            _rawContent
+            content
         }
     }
 `
 
-const serializers = {
-    types: {
-        // eslint-disable-next-line react/display-name
-        block: props => {
-            const level = props.node.style || 'normal'
-
-            if (/^h\d/.test(level)) {
-                return <h3 className="text-xl font-bold mb-2">{props.children}</h3>
-            }
-
-            return <p>{props.children}</p>
-        },
-    },
-}
-
 function blogPost({ data }) {
     const { post } = data
-    console.log(post._rawContent)
+
+    const renderers = {
+        paragraph: function p({ children }) {
+            return <p className="mb-4 text-base leading-loose">{children}</p>
+        },
+        heading: function H({ level, children }) {
+            const PostHeading = `h${level}`
+            const fontSizeKey = {
+                1: 'text-3xl',
+                2: 'text-2xl',
+                3: 'text-xl',
+            }
+
+            if (level === 1) {
+                return (
+                    <div>
+                        <h1 className="text-3xl font-bold mb-2">{children}</h1>
+                        <p className="text-gray-600 font-semibold mb-4">{post.date}</p>
+                    </div>
+                )
+            }
+
+            return (
+                <PostHeading className={`${fontSizeKey[level]} ${level === 1 ? 'mt-0' : 'mt-8'} font-bold mb-4`}>
+                    {children}
+                </PostHeading>
+            )
+        },
+        blockquote: function BQ({ children }) {
+            return (
+                <blockquote className="border-l-2 pl-2 italic text-gray-600 text-lg leading-relaxed">
+                    {children}
+                </blockquote>
+            )
+        },
+    }
     return (
         <Layout>
             <SEO title="blog" />
-            <h2 className="text-2xl font-bold mb-8">{post.title}</h2>
-            <BlockContent blocks={post._rawContent} serializers={serializers} />
+            <ReactMarkdown source={post.content} renderers={renderers} />
         </Layout>
     )
 }
