@@ -56,6 +56,9 @@ function Header() {
                             className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
                             key={link.title}
                             to={link.route}
+                            getProps={({ isPartiallyCurrent }) =>
+                                isPartiallyCurrent ? { style: { fontWeight: 'bold' } } : null
+                            }
                         >
                             {link.title}
                         </Link>
