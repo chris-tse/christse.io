@@ -41,7 +41,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         {
             allSanityBlogPost {
                 nodes {
-                    _rawContent
                     date(formatString: "YYYY/MM/DD")
                     title
                     slug
