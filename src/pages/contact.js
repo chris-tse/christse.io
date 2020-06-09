@@ -47,6 +47,7 @@ function ContactPage() {
                         id="message"
                         placeholder="Say something..."
                         rows="8"
+                        name="message"
                     />
 
                     <button className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600">
