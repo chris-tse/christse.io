@@ -48,11 +48,7 @@ function blogPost({ data }) {
             )
         },
         blockquote: function BQ({ children }) {
-            return (
-                <blockquote className="border-l-2 pl-2 italic text-gray-600 text-lg leading-relaxed">
-                    {children}
-                </blockquote>
-            )
+            return <blockquote className="border-l-2 pl-2 italic text-gray-600 leading-relaxed">{children}</blockquote>
         },
     }
     return (
