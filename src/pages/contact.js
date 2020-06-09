@@ -8,7 +8,13 @@ function ContactPage() {
         <Layout>
             <SEO keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]} title="Contact" />
             <section>
-                <form className="mx-auto md:w-2/3" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <form
+                    name="gatsby-contact-form"
+                    className="mx-auto md:w-2/3"
+                    method="POST"
+                    netlify-honeypot="bot-field"
+                    data-netlify="true"
+                >
                     <p className="mb-8 leading-loose">
                         Want to get in touch? Leave a message down below and I&apos;ll get back to you as soon as I can.
                     </p>
