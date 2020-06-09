@@ -19,6 +19,7 @@ function ContactPage() {
                         Want to get in touch? Leave a message down below and I&apos;ll get back to you as soon as I can.
                     </p>
                     <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="form-name" value="gatsby-contact-form" />
 
                     <label className="block mb-2 text-xs font-bold uppercase" htmlFor="name">
                         Name <span className="text-red-500">*</span>
