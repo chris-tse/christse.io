@@ -57,7 +57,7 @@ function blogPost({ data }) {
     }
     return (
         <Layout>
-            <SEO title="blog" />
+            <SEO title={post.title} />
             <ReactMarkdown source={post.content} renderers={renderers} />
         </Layout>
     )
