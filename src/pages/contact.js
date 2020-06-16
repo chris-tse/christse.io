@@ -58,9 +58,7 @@ function ContactPage() {
                         name="message"
                     />
 
-                    <button className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600">
-                        Submit
-                    </button>
+                    <button className="inline-block rounded-sm py-2 px-4 bg-purple-800 text-white">Submit</button>
                 </form>
             </section>
         </Layout>
