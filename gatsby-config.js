@@ -8,6 +8,7 @@ module.exports = {
         title: `Chris Tse`,
         description: `Chris Tse is a software engineer based in Oklahoma City with a focus on beautiful and performant websites.`,
         author: `@ChrisMTse`,
+        siteUrl: `https://christse.io`,
     },
     plugins: [
         `gatsby-plugin-eslint`,

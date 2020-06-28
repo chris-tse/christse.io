@@ -11,12 +11,14 @@ function SEO({ description, lang, meta, keywords, title }) {
                     title
                     description
                     author
+                    siteUrl
                 }
             }
         }
     `)
 
     const metaDescription = description || site.siteMetadata.description
+    const { siteUrl } = site.siteMetadata
 
     return (
         <Helmet
@@ -55,6 +57,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 {
                     name: `twitter:description`,
                     content: metaDescription,
+                },
+                {
+                    name: `twitter:image`,
+                    content: `${siteUrl}/twitterlogo.jpg`,
                 },
             ]
                 .concat(
