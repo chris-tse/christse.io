@@ -8,12 +8,12 @@ import BlogEntry from '../components/blog-entry'
 
 export const query = graphql`
     query {
-        allSanityBlogPost {
+        allSanityBlogPost(sort: { fields: date, order: DESC }) {
             nodes {
                 date(formatString: "YYYY/MM/DD")
                 description
-                title
                 slug
+                title
             }
         }
     }
