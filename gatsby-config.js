@@ -6,7 +6,7 @@ const fullConfig = resolveConfig(tailwindConfig)
 module.exports = {
     siteMetadata: {
         title: `Chris Tse`,
-        description: `Chris Tse is a software engineer based in Oklahoma City with a focus on beautiful and performant interfaces.`,
+        description: `Chris Tse is a software engineer based in Oklahoma City with a focus on beautiful and performant websites.`,
         author: `@ChrisMTse`,
     },
     plugins: [
