@@ -1,17 +1,18 @@
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import React, { useState } from 'react'
+import logo from '../images/mylogo.png'
 
 function Header() {
     const [isExpanded, toggleExpansion] = useState(false)
-    const { site } = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
+    // const { site } = useStaticQuery(graphql`
+    //     query SiteTitleQuery {
+    //         site {
+    //             siteMetadata {
+    //                 title
+    //             }
+    //         }
+    //     }
+    // `)
 
     const routeList = [
         {
@@ -37,7 +38,8 @@ function Header() {
             <div className="flex flex-wrap items-center justify-between max-w-3xl p-4 mx-auto md:p-8">
                 <Link to="/">
                     <span className="flex items-center no-underline">
-                        <span className="text-xl font-bold tracking-tight">{site.siteMetadata.title}</span>
+                        {/* <span className="text-xl font-bold tracking-tight">{site.siteMetadata.title}</span> */}
+                        <img width="50" src={logo} alt="" />
                     </span>
                 </Link>
 
