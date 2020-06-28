@@ -4,15 +4,6 @@ import logo from '../images/mylogo.png'
 
 function Header() {
     const [isExpanded, toggleExpansion] = useState(false)
-    // const { site } = useStaticQuery(graphql`
-    //     query SiteTitleQuery {
-    //         site {
-    //             siteMetadata {
-    //                 title
-    //             }
-    //         }
-    //     }
-    // `)
 
     const routeList = [
         {
