@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -19,6 +20,8 @@ export const query = graphql`
 
 function blogPost({ data }) {
     const { post } = data
+
+    console.log(post)
 
     const renderers = {
         paragraph: function p({ children }) {
@@ -50,6 +53,22 @@ function blogPost({ data }) {
         blockquote: function BQ({ children }) {
             return <blockquote className="border-l-2 pl-2 italic text-gray-600 leading-relaxed">{children}</blockquote>
         },
+        inlineCode: function InlineCode({ children }) {
+            return <code className="bg-gray-200 px-2 py-1 rounded font-mono text-purple-800">{children}</code>
+        },
+        code: function CodeBlock({ language, value }) {
+            // return (
+            //     <pre className="mb-8 bg-black p-4 rounded text-white">
+            //         <code>{value}</code>
+            //     </pre>
+            // )
+
+            return (
+                <SyntaxHighlighter language={language} style={atomDark}>
+                    {value}
+                </SyntaxHighlighter>
+            )
+        },
     }
     return (
         <Layout>
@@ -57,10 +76,6 @@ function blogPost({ data }) {
             <ReactMarkdown source={post.content} renderers={renderers} />
         </Layout>
     )
-}
-
-blogPost.propTypes = {
-    data: PropTypes.object,
 }
 
 export default blogPost
