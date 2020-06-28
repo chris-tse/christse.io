@@ -16,10 +16,13 @@ function Project({ name, description, thumbnailPath, demoUrl, sourceUrl }) {
                 <h3 className="text-2xl mb-4">{name}</h3>
                 <p className=" mb-8">{description}</p>
 
-                <a className="inline-block rounded-sm py-2 px-4 bg-purple-800 text-white" href={demoUrl}>
+                <a
+                    className="inline-block rounded-sm py-2 px-4 bg-purple-800 text-white hover:bg-purple-900"
+                    href={demoUrl}
+                >
                     Demo
                 </a>
-                <a className="inline-block rounded-sm py-2 px-4 bg-gray-300 ml-2" href={sourceUrl}>
+                <a className="inline-block rounded-sm py-2 px-4 bg-gray-300 ml-2 hover:bg-gray-200" href={sourceUrl}>
                     Source
                 </a>
             </div>
