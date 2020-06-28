@@ -21,8 +21,6 @@ export const query = graphql`
 function blogPost({ data }) {
     const { post } = data
 
-    console.log(post)
-
     const renderers = {
         paragraph: function p({ children }) {
             return <p className="mb-4 text-base leading-loose">{children}</p>
