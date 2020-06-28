@@ -2,22 +2,68 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import PageHeading from '../components/page-heading'
 
 function ContactPage() {
     return (
         <Layout>
             <SEO keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]} title="Contact" />
             <section>
+                <PageHeading>Get in touch!</PageHeading>
+                <p className="mb-4 leading-normal">
+                    Want to get in touch? Find me at any of the following places or fill in the form below. I will get
+                    back to you as soon as I can
+                </p>
+
+                <ul className="mb-10 list-disc list-inside">
+                    <li>
+                        <a
+                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
+                            href="https://twitter.com/ChrisMTse"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
+                            href="https://twitch.tv/TheOtakuDev"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Twitch
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
+                            href="https://github.com/chris-tse"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
+                            href="https://linkedin.com/in/chrismtse/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
                 <form
                     name="gatsby-contact-form"
-                    className="mx-auto md:w-2/3"
+                    className="mx-auto md:w-2/3 p-8 shadow-lg rounded-md bg-gray-300"
                     method="POST"
                     netlify-honeypot="bot-field"
                     data-netlify="true"
                 >
-                    <p className="mb-8 leading-loose">
-                        Want to get in touch? Leave a message down below and I&apos;ll get back to you as soon as I can.
-                    </p>
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="gatsby-contact-form" />
 
@@ -28,7 +74,7 @@ function ContactPage() {
                     <input
                         className="w-full mb-6 form-input"
                         id="name"
-                        placeholder="Billy Bob"
+                        placeholder="ex. Akira Yamada"
                         type="text"
                         name="name"
                         required
@@ -41,7 +87,7 @@ function ContactPage() {
                     <input
                         className="w-full mb-6 form-input"
                         id="email"
-                        placeholder="name@example.com"
+                        placeholder="ex. name@hey.com"
                         type="email"
                         name="email"
                     />
@@ -54,7 +100,7 @@ function ContactPage() {
                         className="w-full mb-6 form-textarea"
                         id="message"
                         placeholder="Say something..."
-                        rows="8"
+                        rows="4"
                         name="message"
                     />
 
