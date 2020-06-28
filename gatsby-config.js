@@ -15,11 +15,11 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-tailwind`,
-                short_name: `starter`,
+                name: `Chris Tse Portfolio`,
+                short_name: `Chris Tse`,
                 start_url: `/`,
                 background_color: fullConfig.theme.colors.white,
-                theme_color: fullConfig.theme.colors.purple['700'],
+                theme_color: fullConfig.theme.colors.purple['800'],
                 display: `minimal-ui`,
                 icon: `src/images/favicon-transparent.png`,
             },
