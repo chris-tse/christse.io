@@ -52,7 +52,11 @@ function blogPost({ data }) {
             return <blockquote className="border-l-2 pl-2 italic text-gray-600 leading-relaxed">{children}</blockquote>
         },
         inlineCode: function InlineCode({ children }) {
-            return <code className="bg-gray-200 px-2 py-1 rounded font-mono text-purple-800">{children}</code>
+            return (
+                <code className="bg-gray-200 px-2 py-1 rounded font-mono text-purple-800 font-semibold">
+                    {children}
+                </code>
+            )
         },
         code: function CodeBlock({ language, value }) {
             // return (
