@@ -17,7 +17,7 @@ function IndexPage() {
                     Hi, I&apos;m Chris. I&apos;m a software engineer specializing in front end development.
                 </h2>
 
-                <p className="leading-loose mb-4">
+                <p className="leading-normal mb-4">
                     I love doing creating things for the web. My main choice of tools currently are React, Sass/SCSS,
                     Tailwind CSS, and Node.js. I was born and raised in Calgary, Canada and now reside in Oklahoma City
                     working at{' '}
