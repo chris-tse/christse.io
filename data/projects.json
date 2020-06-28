@@ -15,7 +15,7 @@
     },
     {
         "name": "Weather App",
-        "description": "A weather app that shows the weather at your current location",
+        "description": "A simple app demonstrating location permissions that shows the current weather at your location.",
         "thumbnailPath": "../weather.jpg",
         "demoUrl": "https://weather.christse.io",
         "sourceUrl": "https://github.com/chris-tse/weather-app"
