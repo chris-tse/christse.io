@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Pomodoro Timer",
+        "description": "A simple pomodoro timer for working and taking breaks.",
+        "thumbnailPath": "../pomodoro.png",
+        "demoUrl": "https://pomotomato.christse.io",
+        "sourceUrl": "https://github.com/chris-tse/ReactHooksPomodoro"
+    },
+    {
+        "name": "Random Quote Generator",
+        "description": "A random quote generator built with React.",
+        "thumbnailPath": "../qwotez.png",
+        "demoUrl": "https://qwotez.christse.io",
+        "sourceUrl": "https://github.com/chris-tse/qwotez"
+    },
+    {
+        "name": "Weather App",
+        "description": "A simple app demonstrating location permissions that shows the current weather at your location.",
+        "thumbnailPath": "../weather.jpg",
+        "demoUrl": "https://weather.christse.io",
+        "sourceUrl": "https://github.com/chris-tse/weather-app"
+    }
+]

@@ -1,0 +1,66 @@
+/* eslint-disable react/prop-types */
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
+
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { graphql } from 'gatsby'
+
+export const query = graphql`
+    query BlogPostTemplateQuery($id: String!) {
+        post: sanityBlogPost(id: { eq: $id }) {
+            date(formatString: "YYYY/MM/DD")
+            title
+            content
+        }
+    }
+`
+
+function blogPost({ data }) {
+    const { post } = data
+
+    const renderers = {
+        paragraph: function p({ children }) {
+            return <p className="mb-4 text-base leading-loose">{children}</p>
+        },
+        heading: function H({ level, children }) {
+            const PostHeading = `h${level}`
+            const fontSizeKey = {
+                1: 'text-3xl',
+                2: 'text-2xl',
+                3: 'text-xl',
+            }
+
+            if (level === 1) {
+                return (
+                    <div>
+                        <h1 className="text-3xl font-bold mb-2">{children}</h1>
+                        <p className="text-gray-600 font-semibold mb-4">{post.date}</p>
+                    </div>
+                )
+            }
+
+            return (
+                <PostHeading className={`${fontSizeKey[level]} ${level === 1 ? 'mt-0' : 'mt-8'} font-bold mb-4`}>
+                    {children}
+                </PostHeading>
+            )
+        },
+        blockquote: function BQ({ children }) {
+            return <blockquote className="border-l-2 pl-2 italic text-gray-600 leading-relaxed">{children}</blockquote>
+        },
+    }
+    return (
+        <Layout>
+            <SEO title={post.title} />
+            <ReactMarkdown source={post.content} renderers={renderers} />
+        </Layout>
+    )
+}
+
+blogPost.propTypes = {
+    data: PropTypes.object,
+}
+
+export default blogPost
