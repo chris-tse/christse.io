@@ -24,7 +24,7 @@
     "tailwindcss",
     "purgecss"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "analyze:lint": "eslint --ext .jsx --ext .js .",
     "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
