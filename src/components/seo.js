@@ -25,6 +25,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             htmlAttributes={{
                 lang,
             }}
+            bodyAttributes={{
+                class: 'min-h-screen',
+            }}
             meta={[
                 {
                     name: `description`,
