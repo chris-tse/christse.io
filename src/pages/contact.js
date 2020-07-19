@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import PageHeading from '../components/page-heading'
+import Layout from '@components/layout'
+import SEO from '@components/seo'
+import PageHeading from '@components/page-heading'
 
 function ContactPage() {
     return (

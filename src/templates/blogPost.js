@@ -4,8 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '@components/layout'
+import SEO from '@components/seo'
 import { graphql } from 'gatsby'
 
 export const query = graphql`
