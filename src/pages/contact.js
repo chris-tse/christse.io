@@ -17,42 +17,22 @@ function ContactPage() {
 
                 <ul className="mb-10 list-disc list-inside">
                     <li>
-                        <a
-                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
-                            href="https://twitter.com/ChrisMTse"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <a className="link" href="https://twitter.com/ChrisMTse" target="_blank" rel="noreferrer">
                             Twitter
                         </a>
                     </li>
                     <li>
-                        <a
-                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
-                            href="https://twitch.tv/TheOtakuDev"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <a className="link" href="https://twitch.tv/TheOtakuDev" target="_blank" rel="noreferrer">
                             Twitch
                         </a>
                     </li>
                     <li>
-                        <a
-                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
-                            href="https://github.com/chris-tse"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <a className="link" href="https://github.com/chris-tse" target="_blank" rel="noreferrer">
                             GitHub
                         </a>
                     </li>
                     <li>
-                        <a
-                            className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
-                            href="https://linkedin.com/in/chrismtse/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <a className="link" href="https://linkedin.com/in/chrismtse/" target="_blank" rel="noreferrer">
                             LinkedIn
                         </a>
                     </li>

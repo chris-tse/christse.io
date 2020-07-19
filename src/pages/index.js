@@ -42,10 +42,7 @@ function IndexPage() {
                     I love doing creating things for the web. My main choice of tools currently are React, Sass/SCSS,
                     Tailwind CSS, and Node.js. I was born and raised in Calgary, Canada and now reside in Oklahoma City
                     working at{' '}
-                    <a
-                        className="text-purple-800 font-bold hover:text-purple-600 hover:underline"
-                        href="https://netsuite.com"
-                    >
+                    <a className="link" href="https://netsuite.com">
                         Oracle Netsuite
                     </a>
                     .
@@ -53,7 +50,7 @@ function IndexPage() {
 
                 <p>
                     If you&apos;d like to get in touch, feel free to{' '}
-                    <Link className="text-purple-800 font-bold hover:text-purple-600 hover:underline" to="/contact">
+                    <Link className="link" to="/contact">
                         leave me a message
                     </Link>
                     .
