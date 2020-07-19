@@ -1,0 +1,93 @@
+[
+    {
+        "section": "Coding",
+        "entries": [
+            {
+                "name": "Terminal",
+                "items": ["Windows - Windows Terminal Preview", "Mac - iTerm 2", "Linux - Guake"]
+            },
+            {
+                "name": "Editor",
+                "items": ["Visual Studio Code", "Intellij IDEA", "Vim"]
+            },
+            {
+                "name": "Themes",
+                "items": [
+                    "<a class=\"link\" href=\"https://marketplace.visualstudio.com/items?itemName=sdras.night-owl\">Night Owl</a>",
+                    "<a class=\"link\" href=\"https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula\">Dracula</a>"
+                ]
+            },
+            {
+                "name": "Extensions",
+                "items": [
+                    "Prettier",
+                    "ESLint",
+                    "Editorconfig",
+                    "Bracket Pair Colorizer 2",
+                    "Git History",
+                    "GitLens",
+                    "Live Server",
+                    "Tailwind CSS IntelliSense",
+                    "Auto Rename Tag"
+                ]
+            }
+        ]
+    },
+    {
+        "section": "Hardware",
+        "entries": [
+            {
+                "name": "Keyboards",
+                "items": [
+                    "Ergodox EZ w/ Everglide Purples",
+                    "Vortex Race 3 w/ Cherry MX Browns",
+                    "OLKB Planck w/ Halo Clears",
+                    "Anne Pro 2 w/ Kailh Blues",
+                    "Das Keyboard 4 Ultimate w/ Cherry MX Blues"
+                ]
+            },
+            {
+                "name": "Custom Built Desktop",
+                "items": [
+                    "Intel Core i7-8700K",
+                    "G.SKILL TridentZ 16 GB RAM",
+                    "EVGA Nvidia GTX 1080",
+                    "NZXT Kraken X62 Cooler",
+                    "NZXT H500 Case",
+                    "Windows 10"
+                ]
+            },
+            {
+                "name": "MacBook Pro Mid-2015",
+                "items": ["Intel Core i7 2.2 GHz", "16 GB RAM"]
+            },
+            {
+                "name": "Monitors",
+                "items": ["27\" Acer Predator XB1 @ 165Hz", "27\" Acer CB271HU @ 75Hz"]
+            },
+            {
+                "name": "Audio",
+                "items": [
+                    "Microphone: Rode Procaster",
+                    "Audio Interface: Focusrite Scarlett Solo",
+                    "Headphones: Sennheiser HD559",
+                    "Amp: JDS Labs Atom Amp",
+                    "DAC: JDS Labs OL DAC - USB Edition"
+                ]
+            },
+            {
+                "name": "Camera",
+                "items": ["Logitech HD C920"]
+            }
+        ]
+    },
+    {
+        "section": "Furniture",
+        "entries": [
+            {
+                "name": "Desk",
+                "items": ["Jarvis Standing Desk Frame", "IKEA GERTON Tabletop"]
+            }
+        ]
+    }
+]
