@@ -1,5 +1,17 @@
 const projects = require('./data/projects.json')
 const workHistory = require('./data/workhistory.json')
+const uses = require('./data/uses.json')
+const path = require('path')
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+        resolve: {
+            alias: {
+                '@components': path.resolve(__dirname, 'src/components'),
+            },
+        },
+    })
+}
 
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     projects.forEach(Project => {
@@ -28,6 +40,19 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             internal: {
                 type: 'WorkHistory',
                 contentDigest: createContentDigest(WorkHistory),
+            },
+        }
+        actions.createNode(node)
+    })
+
+    uses.forEach(use => {
+        const node = {
+            section: use.section,
+            entries: use.entries,
+            id: createNodeId(`Uses-${use.section}`),
+            internal: {
+                type: 'Uses',
+                contentDigest: createContentDigest(use),
             },
         }
         actions.createNode(node)

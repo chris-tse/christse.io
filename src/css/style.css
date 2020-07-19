@@ -3,3 +3,15 @@
 @tailwind components;
 /*! purgecss end ignore */
 @tailwind utilities;
+
+html {
+    font-size: 18px;
+}
+
+.link {
+    @apply font-semibold text-purple-800;
+}
+
+.link:hover {
+    @apply text-purple-600 underline;
+}

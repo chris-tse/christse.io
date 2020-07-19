@@ -15,6 +15,10 @@ function Header() {
             title: `Projects`,
         },
         {
+            route: `/uses`,
+            title: `Uses`,
+        },
+        {
             route: `/blog`,
             title: `Blog`,
         },
