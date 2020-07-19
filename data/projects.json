@@ -22,7 +22,7 @@
     },
     {
         "name": "Weather App",
-        "description": "A simple app demonstrating location permissions that shows the current weather at your location. Made with plain vanilla JavaScript.",
+        "description": "A simple app using location permissions to show the current weather. Made with plain vanilla JavaScript.",
         "thumbnailPath": "/weather.jpg",
         "demoUrl": "https://weather.christse.io",
         "sourceUrl": "https://github.com/chris-tse/weather-app"
