@@ -42,8 +42,8 @@ function IndexPage() {
                     I love creating things for the web. My main choice of tools currently are React, Sass/SCSS,
                     Tailwind CSS, and Node.js. I was born and raised in Calgary, Canada and now reside in Oklahoma City
                     working at{' '}
-                    <a className="link" href="https://netsuite.com">
-                        Oracle Netsuite
+                    <a className="link" href="https://www.rentpath.com/">
+                        RentPath
                     </a>
                     .
                 </p>
