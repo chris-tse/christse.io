@@ -2,8 +2,9 @@ import React from 'react'
 
 import Layout from '@components/layout'
 import SEO from '@components/seo'
-import face from '../images/face.jpg'
-import { Link } from 'gatsby'
+import face from '../public/face.jpg'
+import Link from 'next/link'
+import Image from 'next/image'
 
 function IndexPage() {
     return (
@@ -31,7 +32,7 @@ function IndexPage() {
 
             <section>
                 <span className="inline-block w-1/4 border-gray-600 md:border-6 border-4 rounded-full overflow-hidden shadow-round">
-                    <img alt="Chris headshot" className="block" src={face} />
+                    <Image alt="Chris Tse headshot" className="block" src={face}/>
                 </span>
 
                 <h2 className="inline-block py-3 mb-4 text-2xl font-bold">
@@ -50,8 +51,8 @@ function IndexPage() {
 
                 <p>
                     If you&apos;d like to get in touch, feel free to{' '}
-                    <Link className="link" to="/contact">
-                        leave me a message
+                    <Link href="/contact">
+                        <a className="link">leave me a message</a>
                     </Link>
                     .
                 </p>

@@ -1,5 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+export type WorkHistory = {
+    employer: string
+    title: string
+    dateRange: string
+    description: string
+}
 
 function Dot() {
     return (
@@ -15,7 +21,9 @@ function Dot() {
     )
 }
 
-function WorkHistoryItem({ employer, title, dateRange, description }) {
+function WorkHistoryItem(item: WorkHistory) {
+    const { employer, title, dateRange, description } = item
+
     return (
         <>
             <h3 className="mb-1 text-lg">
@@ -30,13 +38,6 @@ function WorkHistoryItem({ employer, title, dateRange, description }) {
             </div>
         </>
     )
-}
-
-WorkHistoryItem.propTypes = {
-    employer: PropTypes.string,
-    title: PropTypes.string,
-    dateRange: PropTypes.string,
-    description: PropTypes.string,
 }
 
 export default WorkHistoryItem

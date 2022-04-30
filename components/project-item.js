@@ -1,15 +1,16 @@
-import PropTypes from 'prop-types'
-import React from 'react'
+import Image from 'next/image'
 
 function Project({ name, description, thumbnailPath, demoUrl, sourceUrl }) {
     return (
         <div className="flex flex-col md:flex-row mb-8">
-            <div className="p-8 pl-0">
-                <img
-                    className="rounded shadow-xl"
+            <div className="m-8 ml-0 shadow-xl h-auto">
+                <Image
+                    width="350"
+                    height="223"
+                    className="rounded"
                     src={thumbnailPath}
-                    style={{ maxWidth: 350 }}
-                    alt="Pomodoro timer project thumbnail"
+                    alt={`${name} thumbnail`}
+                    layout="fixed"
                 />
             </div>
             <div className="row-span-2 p-8 pl-0">
@@ -22,20 +23,12 @@ function Project({ name, description, thumbnailPath, demoUrl, sourceUrl }) {
                 >
                     Demo
                 </a>
-                <a className="inline-block rounded-sm py-2 px-4 bg-gray-300 ml-2 hover:bg-gray-200" href={sourceUrl}>
+                <a className="inline-block rounded-sm py-2 px-4 bg-gray-200 ml-2 hover:bg-gray-100" href={sourceUrl}>
                     Source
                 </a>
             </div>
         </div>
     )
-}
-
-Project.propTypes = {
-    name: PropTypes.string,
-    description: PropTypes.string,
-    thumbnailPath: PropTypes.string,
-    demoUrl: PropTypes.string,
-    sourceUrl: PropTypes.string,
 }
 
 export default Project

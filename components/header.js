@@ -1,9 +1,11 @@
-import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import logo from '../images/mylogo.png'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 function Header() {
     const [isExpanded, toggleExpansion] = useState(false)
+    const router = useRouter()
 
     const routeList = [
         {
@@ -31,10 +33,10 @@ function Header() {
     return (
         <header className="text-purple-900">
             <div className="flex flex-wrap items-center justify-between max-w-3xl p-4 mx-auto md:p-8">
-                <Link to="/">
+                <Link href="/">
                     <span className="flex items-center no-underline">
                         {/* <span className="text-xl font-bold tracking-tight">{site.siteMetadata.title}</span> */}
-                        <img width="50" src={logo} alt="" />
+                        <Image width="50" height="53" src="/mylogo.png" alt="" />
                     </span>
                 </Link>
 
@@ -55,17 +57,10 @@ function Header() {
                 >
                     {routeList.map((link, index) => (
                         <Link
-                            activeClassName="font-bold"
-                            className={`${
-                                index !== routeList.length - 1 ? 'mb-4 md:mb-0' : ''
-                            } block no-underline md:inline-block md:mt-0 md:ml-6`}
                             key={link.title}
-                            to={link.route}
-                            getProps={({ isPartiallyCurrent }) =>
-                                isPartiallyCurrent ? { style: { fontWeight: 'bold' } } : null
-                            }
+                            href={link.route}
                         >
-                            {link.title}
+                            <a className={`mb-4 md:mb-0 block no-underline md:inline-block md:mt-0 md:ml-6 ${router.asPath === link.route ? 'font-bold' : ''}`}>{link.title}</a>
                         </Link>
                     ))}
                 </nav>

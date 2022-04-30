@@ -1,8 +1,14 @@
 [
     {
+        "employer": "RentPath",
+        "title": "Software Engineer",
+        "dateRange": "April 2021 - Present",
+        "description": "Increase conversion rate of rental properties through improving the search experience. We improve search result relevancy with ML sort and enhance SEO with performant, fast-loading server rendered React pages."
+    },
+    {
         "employer": "Oracle Netsuite",
         "title": "Software Engineer",
-        "dateRange": "March 2019 - Present",
+        "dateRange": "March 2019 - April 2021",
         "description": "Enhance the user experience with Netsuite’s Site Management Tools by creating React components capable of handling enterprise-level data. I work closely with designers to workshop and iterate on the UX of components and contribute to technical design documents of release features."
     },
     {

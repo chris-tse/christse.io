@@ -1,30 +1,27 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { GetStaticProps } from 'next'
 
 import Layout from '@components/layout'
 import SEO from '@components/seo'
 import PageHeading from '@components/page-heading'
-import WorkHistoryItem from '@components/work-history-item'
+import WorkHistoryItem from '@components/WorkHistoryItem'
+import workHistory from '@data/workhistory.json'
 
-export const query = graphql`
-    query WorkHistoryQuery {
-        allWorkHistory {
-            nodes {
-                employer
-                title
-                dateRange
-                description
-            }
+import type { WorkHistory } from '@components/WorkHistoryItem'
+
+type WorkHistoryProps = {
+    workHistory: WorkHistory[]
+}
+
+export const getStaticProps: GetStaticProps<WorkHistoryProps> = () => {
+    return {
+        props: {
+            workHistory: workHistory as WorkHistory[],
         }
     }
-`
+}
 
-function WorkHistoryPage({ data }) {
-    const {
-        allWorkHistory: { nodes: workHistory },
-    } = data
-
+function WorkHistoryPage(data: WorkHistoryProps) {
     return (
         <Layout>
             <SEO title="About" />
@@ -38,10 +35,6 @@ function WorkHistoryPage({ data }) {
             </section>
         </Layout>
     )
-}
-
-WorkHistoryPage.propTypes = {
-    data: PropTypes.object,
 }
 
 export default WorkHistoryPage

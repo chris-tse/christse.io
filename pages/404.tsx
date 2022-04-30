@@ -1,15 +1,16 @@
 import React from 'react'
+import Image from 'next/image'
 
-import Layout from '@components/layout'
-import SEO from '@components/seo'
-import abductionIllustration from '../images/abduction-illustration.svg'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import abductionIllustration from '../public/abduction-illustration.svg'
 
 function NotFoundPage() {
     return (
         <Layout>
-            <SEO title="404: Not found" />
+            <SEO title="404: Not found"/>
             <div>
-                <img
+                <Image
                     alt="Ghost getting abducted by aliens"
                     className="block mx-auto w-1/2"
                     src={abductionIllustration}

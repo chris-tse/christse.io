@@ -1,8 +1,9 @@
 import React from 'react'
+import Image from 'next/image'
 
-import Layout from '@components/layout'
-import SEO from '@components/seo'
-import PageHeading from '@components/page-heading'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import PageHeading from '../components/page-heading'
 import miyazaki from '../../images/miyazaki.jpg'
 
 function TributePage() {
@@ -17,7 +18,7 @@ function TributePage() {
                     </PageHeading>
                 </div>
 
-                <img src={miyazaki} alt="Director Hayao Miyazaki of Studio Ghibli" />
+                <Image src={miyazaki} alt="Director Hayao Miyazaki of Studio Ghibli" />
             </div>
 
             <p className="text-center italic text-gray-600 mt-2 mb-4">
