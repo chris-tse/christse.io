@@ -43,9 +43,8 @@ function IndexPage() {
                     Tailwind CSS, and Node.js. I was born and raised in Calgary, Canada and now reside in Oklahoma City
                     working at{' '}
                     <a className="link" href="https://www.rentpath.com/">
-                        RentPath
-                    </a>
-                    .
+                        Rent.
+                    </a>, a Redfin company.
                 </p>
 
                 <p>
