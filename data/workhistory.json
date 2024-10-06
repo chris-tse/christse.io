@@ -1,8 +1,14 @@
 [
     {
+        "employer": "Rent. a Redfin Company",
+        "title": "Software Engineer",
+        "dateRange": "April 2021 - Present",
+        "description": "Optimize and modernize both B2B and B2C applications, leading to improved monthly active users and conversion rates respectively. We rewrote our B2B platform from Salesforce to SvelteKit, while updating the B2C sites from in-house SSR React to Next.js. My work also contributed to reducing load times and improving INP metrics across the site, which in turn helped keep our search engine rankings high."
+    },
+    {
         "employer": "Oracle Netsuite",
         "title": "Software Engineer",
-        "dateRange": "March 2019 - Present",
+        "dateRange": "March 2019 - April 2021",
         "description": "Enhance the user experience with Netsuite’s Site Management Tools by creating React components capable of handling enterprise-level data. I work closely with designers to workshop and iterate on the UX of components and contribute to technical design documents of release features."
     },
     {
